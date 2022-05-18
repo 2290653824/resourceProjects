@@ -1,0 +1,53 @@
+# 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/resource?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+  thymeleaf:
+    cache: false
+
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    connect-timeout: 5000ms
+    jedis:
+      pool:
+        max-active: 8  #连接池的最大连接数（负数表示没有限制）
+        max-wait: -1ms #连接池最大阻塞等待时间
+        max-idle: 8 #最大空闲连接
+        min-idle: 0 #最小等待连接
+
+
+# 自定义图片的路径
+imgFilePath: D:\Develop\myprojects\resourceProjects\img\
+lucencePath: D:\Develop\myprojects\resourceProjects\lucence\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
