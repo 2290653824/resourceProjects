@@ -9,6 +9,13 @@ public interface UserService  {
 
 
     /**
+     * 根据id更新用户
+     * @param user
+     * @return
+     */
+    public int updateById(User user);
+
+    /**
      * 根据用户的用户名查找用户实体
      * @param username
      * @return

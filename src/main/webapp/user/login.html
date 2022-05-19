@@ -41,6 +41,8 @@
 <script src="/static/layui/layui.js"></script>
 <script src="/static/layui/layui.all.js"></script>
 <script>
+
+
     layui.form.verify({
         username: [
             /^[\S]{5,15}$/
@@ -67,7 +69,7 @@
                 data: data,
                 success: function (res) {
 
-
+                    //这里的trim是什么意思？
                     if(res.success){
                         if(rememberMe=="on"){
                             $.cookie("user",$("#username").val().trim()+"-"+$("#password").val().trim(),
@@ -75,6 +77,7 @@
                         }else {
                             $.cookie("user",null);
                         }
+                        console.log("在这里");
                         layer.msg('登陆成功！',{
                             icon: 1,
                             time: 1000
@@ -96,6 +99,27 @@
             return false;
         });
     });
+
+    /**
+     * 找回密码
+     */
+    function findPassword(){
+        var index = parent.layer.getFrameIndex(window.name);            //得到当前iframe的索引
+        parent.layer.close(index);                                      //关闭当前弹出的iframe
+        parent.layer.open({
+            type: 2,
+            title: false,
+            area : [ '450px', '370px' ], //宽高
+            closeBtn : 0, //不显示关闭按钮
+            scrollbar: false, //禁止浏览器出现滚动条
+            resize: false, //禁止拉伸
+            move : false, //禁止拖拽
+            shade : 0.8, //遮罩
+
+            shadeClose : true, //开启遮罩关闭
+            content : '/user/findPassword.html', //这里content是一个Url
+        });
+    }
 
     $(function () {
         //从cookie中获取记住的用户名密码
