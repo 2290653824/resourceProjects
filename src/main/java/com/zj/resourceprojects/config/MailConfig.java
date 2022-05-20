@@ -12,8 +12,8 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 @Configuration
 public class MailConfig {
 
-    private static final String USERNAME="2290653824@qq.com";
-    private static final String PASSWORD="gvcdanelghiadhja";
+    private static final String USERNAME="2290653824@qq.com";  // 指定发送邮件的账户
+    private static final String PASSWORD="gvcdanelghiadhja";  //指定发送邮箱的授权码
 
     /**
      * 建议学习一下MailSender是什么

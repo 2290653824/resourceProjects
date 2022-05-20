@@ -20,4 +20,9 @@ public class Consts {
     /**资源类型名称*/
     public static final String ALL_ARC_TYPE_NAME = "allArcType";
 
+    /**
+     * 排序字段的名称
+     */
+    private static final String SORT_NAME="sort";
+
 }
